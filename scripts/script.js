@@ -21,10 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
       entries.forEach(entry => {
         let newPost = document.createElement('journal-entry');
         count++;
-        newPost.id = "entry" + count;
+        newPost.id = count;
         newPost.entry = entry;
         newPost.addEventListener('click', event =>{
-          location.hash = "view-" + newPost.id;
+          location.hash = "entry" + newPost.id;
         })
         document.querySelector('main').appendChild(newPost);
       });

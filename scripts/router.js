@@ -13,7 +13,7 @@ export const router = {};
  */
 router.setState = function(document,hash) {
   console.log(hash);
-  if (hash.indexOf("#view-entry")>=0) {
+  if (hash.indexOf("#entry")>=0) {
     viewEntry(document,hash.substring(6));
     return;
   }
@@ -27,10 +27,12 @@ router.setState = function(document,hash) {
 
 function viewSettings(document) {
   document.body.className="settings";
+  document.title = "Settings";
 }
 
 function viewHomePage (document) {
   document.body.className="";
+  document.title = "Home";
 }
 
 function viewEntry (document,id) {
@@ -39,6 +41,7 @@ function viewEntry (document,id) {
     viewHomePage(document);
     return false;
   }
+  document.title = "Entry #" + id;
   let entryPage = document.querySelector("entry-page");
   //Delete the <entry-page> and make a new one if it already has content
   if (entryPage.entry.content) {
