@@ -1,11 +1,5 @@
 // router.js
 
-export const States = {
-  Home: 0,
-  Entry: 1,
-  Settings: 2
-}
-
 export const router = {};
 
 /**

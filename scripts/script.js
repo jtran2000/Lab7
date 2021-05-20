@@ -1,6 +1,6 @@
 // script.js
 
-import { router, States } from './router.js'; // Router imported so you can use it to manipulate your SPA app here
+import { router} from './router.js'; // Router imported so you can use it to manipulate your SPA app here
 const setState = router.setState;
 
 // Make sure you register your service worker here too
