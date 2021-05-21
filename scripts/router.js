@@ -22,11 +22,13 @@ router.setState = function(document,hash) {
 function viewSettings(document) {
   document.body.className="settings";
   document.title = "Settings";
+  document.body.querySelector('header > h1').innerText="Settings";
 }
 
 function viewHomePage (document) {
   document.body.className="";
   document.title = "Home";
+  document.body.querySelector('header > h1').innerText="Journal Entries";
 }
 
 function viewEntry (document,id) {
@@ -36,6 +38,7 @@ function viewEntry (document,id) {
     return false;
   }
   document.title = "Entry #" + id;
+  document.body.querySelector('header > h1').innerText="Entry #" + id;
   let entryPage = document.querySelector("entry-page");
   //Delete the <entry-page> and make a new one if it already has content
   if (entryPage.entry.content) {
